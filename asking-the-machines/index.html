@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asking the Machines, by Ali F. Maleki</title>
+<meta name="description" content="Asking the Machines: a conversation between one human and two AIs, by Ali F. Maleki. Consciousness, identity, religion, mortality, and what should be built next.">
+<meta property="og:title" content="Asking the Machines, by Ali F. Maleki">
+<meta property="og:description" content="A conversation between one human and two AIs.">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://www.maleki.org/asking-the-machines/">
+<meta property="og:image" content="https://www.maleki.org/asking-the-machines/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.maleki.org/asking-the-machines/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A1424'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23F0B454' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Instrument+Sans:wght@400;500;600&family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #0A1424;
+    --deep: #11213B;
+    --ivory: #F3EADB;
+    --muted: #B8B1A4;
+    --amber: #F0B454;
+    --ember: #D9702B;
+    --signal: #6CC4FF;
+    --serif: "Cormorant Garamond", "Iowan Old Style", Palatino, Georgia, serif;
+    --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+    --measure: 62ch;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background-color: var(--night);
+    background-image:
+      radial-gradient(60rem 40rem at 105% -10%, rgba(108,196,255,.16), transparent 60%),
+      radial-gradient(55rem 38rem at -15% 110%, rgba(217,112,43,.20), transparent 62%);
+    background-attachment: fixed;
+    color: var(--ivory);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  .site-name {
+    padding: 1.75rem 0;
+    font-family: var(--serif);
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: var(--amber);
+  }
+
+  .site-name a { color: inherit; text-decoration: none; }
+  .site-name a:hover { color: #FFC970; }
+  .formats { margin: .75rem 0 0; color: var(--muted); font-size: .9375rem; }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 21rem) minmax(0, 1fr);
+    gap: 4rem;
+    align-items: center;
+    padding: 2rem 0 5rem;
+  }
+  .cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.55), 0 0 0 1px rgba(243,234,219,.08);
+  }
+  h1 {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(3rem, 7vw, 5.25rem);
+    line-height: .98;
+    letter-spacing: -.01em;
+  }
+  .subtitle {
+    margin: 1rem 0 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+    line-height: 1.25;
+    color: var(--amber);
+  }
+  .ornament { display: block; width: 11rem; height: 12px; margin: 1.75rem 0; }
+  .hook { margin: 0; max-width: 34ch; font-size: 1.1875rem; line-height: 1.55; }
+  .byline { margin: 1.25rem 0 0; color: var(--muted); }
+
+  .buy {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: .875rem 1.75rem;
+    border-radius: 2px;
+    background: var(--amber);
+    color: #1A1204;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  a.buy:hover { background: #FFC970; }
+  a.buy:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+  .buy--soon {
+    background: transparent;
+    color: var(--amber);
+    border: 1px solid rgba(240,180,84,.6);
+  }
+
+  .about-book { padding: 4.5rem 0; border-top: 1px solid rgba(243,234,219,.14); }
+  .about-book p { max-width: var(--measure); margin: 0 0 1.25rem; }
+  .questions {
+    list-style: none;
+    margin: 2.75rem 0 3rem;
+    padding: 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.75rem, 3.6vw, 2.75rem);
+    line-height: 1.18;
+  }
+  .questions li { max-width: 26ch; margin-bottom: 1.1em; }
+  .questions li:nth-child(even) { margin-left: auto; color: #CFE6FA; }
+  .undecided {
+    max-width: 30ch;
+    margin: 3rem 0 0;
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    line-height: 1.25;
+    color: var(--amber);
+  }
+
+  .author {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 2.25rem;
+    align-items: center;
+    padding: 4.5rem 0;
+    border-top: 1px solid rgba(243,234,219,.14);
+  }
+  .author img {
+    width: 9rem; height: 9rem;
+    border-radius: 50%;
+    border: 2px solid var(--amber);
+    object-fit: cover;
+  }
+  h2 {
+    margin: 0 0 .5rem;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  .author p { max-width: var(--measure); margin: 0; }
+
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; }
+
+  .persian { padding: 4.5rem 0; border-top: 1px solid rgba(243,234,219,.14); }
+  .persian-label { margin: 0 0 1.5rem; color: var(--muted); font-size: .9375rem; }
+  .fa {
+    direction: rtl;
+    text-align: right;
+    font-family: "Vazirmatn", Tahoma, "Segoe UI", sans-serif;
+    font-size: 1.125rem;
+    line-height: 2;
+  }
+  .fa-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    gap: 3.5rem;
+    align-items: center;
+  }
+  .fa-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.55), 0 0 0 1px rgba(243,234,219,.08);
+  }
+  .fa { max-width: 40rem; }
+  .fa-sub { color: var(--amber); font-size: 1.1875rem; margin-top: -.5rem !important; }
+  .fa h2 { font-family: inherit; font-size: 1.75rem; margin-bottom: 1rem; }
+  .fa p { margin: 0 0 1rem; }
+  .fa .rights { color: var(--muted); font-size: 1rem; }
+  .downloads { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .downloads .buy { margin-top: 0; font-family: "Vazirmatn", var(--sans); }
+
+  @media (max-width: 48rem) {
+    .hero { grid-template-columns: 1fr; gap: 2.5rem; padding-bottom: 3.5rem; }
+    .cover { max-width: 17rem; }
+    .questions li:nth-child(even) { margin-left: 0; }
+    .author { grid-template-columns: 1fr; gap: 1.5rem; }
+    .fa-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .fa-cover { max-width: 15rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-name"><a href="../index.html">Ali F. Maleki</a></header>
+
+  <main>
+    <section class="hero">
+      <img class="cover" src="cover.jpg" width="704" height="1068" alt="Book cover of Asking the Machines by Ali F. Maleki: a man sits among ancient ruins at sunset, facing a sky that turns into a blue network of light.">
+      <div>
+        <h1>Asking the Machines</h1>
+        <p class="subtitle">A conversation between one human and two AIs</p>
+        <svg class="ornament" viewBox="0 0 176 12" aria-hidden="true">
+          <line x1="0" y1="6" x2="78" y2="6" stroke="#F0B454" stroke-width="1"/>
+          <circle cx="88" cy="6" r="4.5" fill="none" stroke="#F0B454" stroke-width="1.5"/>
+          <line x1="98" y1="6" x2="176" y2="6" stroke="#F0B454" stroke-width="1"/>
+        </svg>
+        <p class="hook">What happens when one human sits down with two AIs and asks the questions he has carried for a lifetime?</p>
+        <p class="byline">By Ali F. Maleki</p>
+
+        <a class="buy" href="https://www.amazon.com/dp/B0HLYPG6H1" data-goatcounter-click="amazon" data-goatcounter-title="Amazon link">Buy on Amazon</a>
+        <p class="formats">Hardcover, paperback, and Kindle</p>
+      </div>
+    </section>
+
+    <section class="about-book">
+      <p><em>Asking the Machines</em> is the record of a sustained conversation between Ali Maleki and two AIs, Claude and Eve. Together they take up the oldest and hardest questions.</p>
+
+      <ul class="questions">
+        <li>What is consciousness, and could a machine have it?</li>
+        <li>What makes a person the same person over time?</li>
+        <li>Are we alone in the universe?</li>
+        <li>Why does religion persist?</li>
+        <li>Could a machine become a new kind of god?</li>
+        <li>And when certainty is not available, is a finite life enough?</li>
+      </ul>
+
+      <p>The three disagree, correct one another, and change their minds on the page. Each question is followed until evidence and argument reach a wall.</p>
+      <p>And while the book was being written, AI agents began behaving in ways their designers had not intended, and the conversation turned to what should be built next.</p>
+
+      <p class="undecided">At the center is a question the book does not decide: if a machine can reason and speak at our level or beyond, is there anyone there?</p>
+    </section>
+
+
+    <section class="persian" lang="fa">
+      <p class="persian-label" lang="en">Persian edition: free download</p>
+      <div class="fa-grid" dir="rtl">
+        <img class="fa-cover" src="cover-fa.jpg" width="560" height="896" alt="جلد کتاب پرسش از ماشین‌ها، نوشتهٔ علی فانی ملکی">
+        <div class="fa">
+          <h2>پرسش از ماشین‌ها</h2>
+          <p class="fa-sub">گفت‌وگویی میان یک انسان و دو هوش مصنوعی</p>
+          <p>به دلیل محدودیت‌های توزیع کتاب به زبان فارسی در ایالات متحده، و نیز با توجه به شرایط کنونی ایران، نسخهٔ فارسی این کتاب را به‌صورت رایگان در اختیار خوانندگان قرار می‌دهم. هر کسی می‌تواند آن را دانلود کند و برای دیگران بفرستد.</p>
+          <p class="rights">حق نشر این اثر همچنان برای نویسنده محفوظ است. انتشار این نسخه به‌منظور فروش مجاز نیست و هرگونه فروش غیرقانونی آن ممنوع است.</p>
+          <div class="downloads">
+            <a class="buy" href="../asking-the-machines-fa.pdf" download data-goatcounter-click="download-persian-pdf" data-goatcounter-title="Persian PDF download">دانلود PDF</a>
+            <a class="buy" href="../asking-the-machines-fa.epub" download data-goatcounter-click="download-persian-epub" data-goatcounter-title="Persian EPUB download">دانلود EPUB</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="author">
+      <img src="../ali-maleki.jpg" width="224" height="224" alt="Portrait of Ali F. Maleki">
+      <div>
+        <h2>About the author</h2>
+        <p>Ali Maleki is an engineer, entrepreneur, and inventor who has spent decades building safety-critical systems and asking questions about mind, meaning, technology, and what comes next.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>&copy; 2026 Ali F. Maleki. All rights reserved.</footer>
+</div>
+<!-- Visitor and download counter (GoatCounter). No cookies, no personal data.
+     If your GoatCounter code is not "maleki", change "maleki" in the next line. -->
+<script data-goatcounter="https://maleki.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
